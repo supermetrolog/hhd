@@ -1,0 +1,169 @@
+:root {
+    --header-bg-color: #2d3136;
+    --header-text-color: #d7d7d7;
+    --logo-color: white;
+    --danger-color: #be393b;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    background-color: #d7d7d7;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #8a8a8a;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #5f5f5f;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #2c2c2c;
+}
+
+.header {
+    background-color: var(--header-bg-color);
+    height: 100%;
+    color: var(--header-text-color);
+}
+
+.container {
+    width: 900px;
+}
+
+.logo img {
+    display: inline;
+}
+
+.logo h5,
+h6 {
+    display: inline;
+    color: var(--logo-color);
+}
+
+.contact-icon {
+    padding-right: 1.6rem;
+    width: 100%;
+    height: 270px;
+}
+
+.contact-icon img {
+    width: 270px;
+}
+
+.textarea {
+    height: 100%;
+}
+
+label {
+    position: relative;
+}
+
+label.required::before {
+    content: "*";
+    position: absolute;
+    top: -3px;
+    right: -10px;
+    color: var(--danger-color);
+    font-size: 20px;
+}
+
+input,
+textarea {
+    display: block;
+    height: 50px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--header-bg-color);
+    border: 1px solid #4c4f53;
+    color: var(--header-text-color);
+    padding: 10px;
+}
+
+textarea {
+    height: 180px;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid var(--danger-color);
+    outline: none;
+}
+
+button {
+    background-color: var(--danger-color);
+    color: var(--header-text-color);
+    border-radius: 2px!important;
+    font-weight: bold!important;
+}
+
+.card-header {
+    background-color: #58ad52;
+    color: white;
+}
+
+.card-body {
+    background-color: #deebde;
+    color: #768275;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.card-body .email {
+    font-weight: bold;
+    color: #58ad52;
+}
+
+.comment:nth-child(odd) .card .card-header {
+    background-color: #4b596c;
+}
+
+.comment:nth-child(odd) .card .card-body {
+    background-color: #e9eef3;
+    color: #6d737b;
+}
+
+.comment:nth-child(odd) .card .card-body .email {
+    color: #6d737b;
+}
+
+.footer {
+    background-color: var(--header-bg-color);
+}
+
+.footer .logo img {
+    width: 30px;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #656566;
+}
+
+.social-icon i {
+    color: #656566;
+}
+
+@media screen and (max-width: 400px) {
+    .contact-icon img {
+        width: 200px;
+    }
+    .contact-icon {
+        padding-right: 0;
+        height: 200px;
+    }
+    input {
+        width: 100%;
+    }
+    .container {
+        width: unset;
+    }
+}
